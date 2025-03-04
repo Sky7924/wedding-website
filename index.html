@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Countdown</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<header>
+    <div class="logo">Your Wedding Logo</div>
+    <nav>
+        <ul>
+            <li><a href="#home"></a></li>
+            
+        </ul>
+    </nav>
+    <!-- View Entourage Button -->
+    <a href="entourage.html" target="_blank" class="view-entourage-btn">View Entourage</a>
+</header>
+
+
+    <style>
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* View Entourage Button */
+.view-entourage-btn {
+    background: #4F7942;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    position: absolute;
+    top: 5px;
+    right: 80px;
+}
+
+.view-entourage-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #5a3e36;
+}
+
+
+
+/* Countdown Section with Border */
+.countdown-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 4px solid #615A3F; /* Add a border around the countdown */
+}
+
+.countdown-container h2 {
+    font-size: 2em;
+    color: #5a3e36;
+    font-family: 'Great Vibes', cursive;
+}
+
+#countdown {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #8B0000;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+
+.countdown-container h2 {
+    font-size: 2em;
+    color: #5a3e36;
+    font-family: 'Great Vibes', cursive;
+}
+
+#countdown {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #8B0000;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+        /* Smooth Page Fade-In Effect */
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #fff8f0;
+            color: #5a3e36;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+/* QR Code Styling */
+.qr-codes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.qr-codes img {
+    width: 120px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+        /* Header Section */
+        .header {
+            position: relative;
+            background: url('4.jpg') no-repeat center;
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        .header h1, .header h2 {
+            position: relative;
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5em;
+        }
+
+        /* Elegant Love Story Section */
+.story {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px; /* Increased padding for a refined look */
+    background: #fff8f5; /* Softer background color */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #4F7942;
+    border-right: 8px solid #4F7942;
+    text-align: center;
+}
+
+.story h2 {
+    font-size: 2.5em;
+    font-family: 'Great Vibes', cursive;
+    color: #5a3e36;
+    margin-bottom: 12px; /* Reduced spacing below the title */
+    letter-spacing: 1px;
+}
+
+.story p {
+    font-size: 1.3em;
+    font-family: 'Playfair Display', serif;
+    color: #4a2e2a;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 0 15px; /* Adds slight padding inside for balance */
+}
+
+.story::before {
+    content: "❝";
+    font-size: 3em;
+    color: #d4a373;
+    font-family: 'Great Vibes', cursive;
+    display: block;
+    margin-bottom: -20px; /* Decorative quote effect */
+}
+
+.story::after {
+    content: "❞";
+    font-size: 3em;
+    color: #d4a373;
+    font-family: 'Great Vibes', cursive;
+    display: block;
+    margin-top: -10px; /* Decorative quote effect */
+}
+
+
+        /* Slideshow Gallery */
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .slides {
+            display: none;
+            width: 100%;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 1.5em;
+            border-radius: 5px;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* Elegant & Compact Guidelines Section */
+.guidelines {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px; /* Reduced padding */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #4F7942;
+    border-right: 6px solid #4F7942;
+    text-align: center;
+}
+
+.guidelines h2 {
+    font-size: 2em;
+    color: #5a3e36;
+    margin-bottom: 10px; /* Reduced space below title */
+}
+
+.guideline-item {
+    margin-bottom: 12px; /* Tighter spacing between sections */
+}
+
+.guideline-item h3 {
+    font-size: 1.4em;
+    color: #5a3e36;
+    margin-bottom: 4px; /* Less space below subheadings */
+}
+
+.guideline-item p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.3; /* Even tighter spacing */
+    margin-bottom: 6px; /* Less space below text */
+}
+
+.color-samples {
+    display: flex;
+    justify-content: center;
+    gap: 6px; /* Tighter spacing between color boxes */
+    margin-top: 6px; /* Less space above colors */
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #5a3e36;
+}
+
+.important-note {
+    background: #ffefef;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #8b0000;
+    border: 1.5px solid #4F7942;
+    display: inline-block;
+    margin-top: 8px; /* Less space above */
+}
+
+.venue-map {
+    margin-top: 8px;
+}
+
+.venue-map img {
+    width: 100%;
+    max-width: 400px; /* Smaller map */
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+    <h1>Our Wedding Countdown</h1>
+    <h2>Dane and Carmela’s Special Day</h2>
+
+</div>
+
+<style>
+    /* Header Button Styling */
+    .header-button {
+        display: inline-block;
+        margin-top: 51px;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s;
+        border: 1px solid white;
+    }
+
+    .header-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+</style>
+
+
+<!-- Countdown Timer Section -->
+<div class="countdown-container">
+    <h2>Countdown to Our Special Day</h2>
+    <div id="countdown"></div>
+</div>
+
+
+    <!-- Love Story Section -->
+    <div class="story">
+        <h2>Our Love Story</h2>
+        <p>Some love stories are written in the stars, but ours is etched in every heartbeat, every shared glance, every moment that led us here. From the first spark to the unshakable bond we now share, our journey has been one of love, laughter, and unwavering devotion. Through every challenge and every joy, we have chosen each other—over and over again. And now, as we step into forever, hand in hand, we carry with us a love that is timeless, boundless, and endlessly beautiful. None of this would have been possible without our God, Jehovah. It is through His love and guidance that we have found each other, and on this special day, all thanks and praises belong to Him.</p>
+    </div>
+
+    <!-- Gallery Section -->
+    <h2>Our Photos</h2>
+    <div class="slideshow-container">
+        <img class="slides active" src="1.jpg" alt="Photo 1">
+        <img class="slides" src="2.jpg" alt="Photo 2">
+        <img class="slides" src="3.jpg" alt="Photo 3">
+	<img class="slides" src="5.jpg" alt="Photo 5">
+	<img class="slides" src="6.jpg" alt="Photo 6">
+	<img class="slides" src="7.jpg" alt="Photo 7">
+	<img class="slides" src="8.jpg" alt="Photo 8">
+	<img class="slides" src="9.jpg" alt="Photo 9">
+	<img class="slides" src="10.jpg" alt="Photo 10">
+	<img class="slides" src="11.jpg" alt="Photo 11">
+	<img class="slides" src="12.jpg" alt="Photo 12">
+	<img class="slides" src="13.jpg" alt="Photo 13">
+	<img class="slides" src="14.jpg" alt="Photo 14">
+	<img class="slides" src="15.jpg" alt="Photo 15">
+	<img class="slides" src="16.jpg" alt="Photo 16">
+	<img class="slides" src="17.jpg" alt="Photo 17">
+	<img class="slides" src="18.jpg" alt="Photo 18">
+	<img class="slides" src="19.jpg" alt="Photo 19">
+	<img class="slides" src="20.jpg" alt="Photo 20">
+	<img class="slides" src="21.jpg" alt="Photo 21">
+        
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <!-- RSVP Section -->
+    <h2>RSVP</h2>
+    <div class="rsvp-container">
+        <p>We would love to celebrate our special day with you! Kindly let us know if you will be attending.</p>
+        <a href="https://docs.google.com/forms/d/1R7EPlZbPFzn_yRYpmcy1gFrn9hFGOgwKvTqVgvW3d3M/edit" target="_blank" class="rsvp-button">Confirm Your Attendance</a>
+    </div>
+
+    <style>
+        /* RSVP Section Styling */
+        .rsvp-container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff8f5;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-left: 8px solid #4F7942;
+            border-right: 8px solid #4F7942;
+        }
+
+        .rsvp-container h2 {
+            font-size: 2em;
+            color: #5a3e36;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .rsvp-container p {
+            font-size: 1.2em;
+            font-family: 'Playfair Display', serif;
+            color: #4a2e2a;
+            line-height: 1.5;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            background: #8B0000;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .rsvp-button:hover {
+            background: #5a3e36;
+        }
+    </style>
+
+    <h2>Gifts</h2>
+    <div class="monetary-gifts">
+        <p>Your presence on our wedding day is already a gift, and we are truly grateful for your love and support. However, if you wish to extend your kindness, we would appreciate any contributions through the following channels:</p>
+        <div class="qr-codes">
+    <div class="qr-item">
+        <img src="gcash-qr.jpg" alt="GCash QR">
+        <p>GCash</p>
+    </div>
+    <div class="qr-item">
+        <img src="bpi-qr.jpg" alt="BPI QR">
+        <p>BPI</p>
+    </div>
+    <div class="qr-item">
+        <img src="metrobank-qr.jpg" alt="Metrobank QR">
+        <p>Metrobank</p>
+    </div>
+</div>
+
+    </div>
+
+
+
+    <!-- Guidelines for Visitors -->
+<div class="guidelines">
+    <h2>Guidelines for Visitors</h2>
+
+    <div class="guideline-item">
+        <h3>📍 Dress Motif</h3>
+        <p>Please wear any shade of green or gray from our motif.</p>
+        <div class="color-samples">
+            <div class="color-box" style="background: #01411C;"></div> 
+            <div class="color-box" style="background: #225A31;"></div>       
+            <div class="color-box" style="background: #8A9A5B;"></div>
+            <div class="color-box" style="background: #615A3F;"></div>
+            <div class="color-box" style="background: #8A7F5A;"></div>
+            
+        </div>
+    </div>
+
+    <div class="guideline-item">
+        <h3>🎩 Dress Code</h3>
+        <p>Formal Attire is required.</p>
+        <div class="important-note">
+            ⚠️ <strong>Important:</strong> Kindly refrain from wearing white or gold attire.
+        </div>
+    </div>
+
+    <div class="guideline-item">
+        <p><strong>🗺️ Venue Map:</strong></p>
+<div class="map" style="text-align: center;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30964.237111820883!2d121.26820825549416!3d14.192271792357063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd5e3c9425e1c1%3A0x97213b81aec701bb!2sKingdom%20Hall%20of%20Jehovah&#39;s%20Witness!5e0!3m2!1sen!2sph!4v1740760538450!5m2!1sen!2sph" width="100%" height="350" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); border: 1px solid #5a3e36;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+    </div>
+</div>
+
+
+    <script>
+        /* Slideshow Functionality */
+        let slideIndex = 0;
+        let slides = document.getElementsByClassName("slides");
+
+        function showSlide(index) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[index].style.display = "block";
+        }
+
+        function changeSlide(n) {
+            slideIndex += n;
+            if (slideIndex >= slides.length) { slideIndex = 0; }
+            if (slideIndex < 0) { slideIndex = slides.length - 1; }
+            showSlide(slideIndex);
+        }
+
+        showSlide(slideIndex);
+    </script>
+<script>
+    function updateCountdown() {
+        const weddingDate = new Date("September 9, 2026 00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeLeft = weddingDate - now;
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = 
+            `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        if (timeLeft < 0) {
+            document.getElementById("countdown").innerHTML = "💍 Happily Married!";
+        }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Run immediately
+</script>
+
+
+</body>
+</html>
